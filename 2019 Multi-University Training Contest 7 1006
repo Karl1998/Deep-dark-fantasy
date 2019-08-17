@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+typedef long long ll;
+using namespace std;
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        ll n, m, k,a,aph,ans;
+        cin >> n >> m >> k;
+        a = m / (n-k+1);
+        ans = n * a + k+m%(n-k+1);
+        if (m < n - k + 1)
+        {
+            ans = m + k;
+        }
+        if (k == 1)
+        {
+            ans = min(m + 1, ans);
+        }
+        cout << ans<<endl;
+    }
+
+    return 0;
+}
